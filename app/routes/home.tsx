@@ -1,13 +1,14 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { FormattedMessage } from 'react-intl'
+import type { Route } from './+types/home'
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+  return [{ title: 'Parcial Web' }]
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <>
+      <FormattedMessage id="greeting" />
+    </>
+  )
 }
